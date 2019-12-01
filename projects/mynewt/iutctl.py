@@ -97,7 +97,7 @@ class MynewtCtl(IutCtl):
         self._btp_worker.open()
         self._btp_worker.register_event_handler(self._event_handler)
 
-        socat_cmd = ("socat -x -v %s,rawer,b115200 UNIX-CONNECT:%s" %
+        socat_cmd = ("socat -x -v %s,rawer,ispeed=115200,ospeed=115200 UNIX-CONNECT:%s" %
                      (self.tty_file, self.btp_address))
 
         log("Starting socat process: %s", socat_cmd)

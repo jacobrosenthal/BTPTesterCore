@@ -38,6 +38,12 @@ BTPTesterCore app running on a computer. Testing with Mynewt relies on
 Nordic nRF5x devices are supported right now. Adding support for other 
 devices and transports should be fairly simple so feel free to submit PRs.
 
+To get serial number of a plugged in device and check nrfjprog
+```
+$ nrfjprog --com
+683193986    /dev/tty.usbmodem0006831939861    VCOM0
+```
+
 **Configuration:**
 
 To create a connection with a Mynewt device you need:
